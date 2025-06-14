@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrux Grid - Case Studies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            margin-bottom: 0;
+            border-bottom: none;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            color: white;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: -0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: white;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 0;
+            padding: 50px 40px;
+        }
+
+        .case-study-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: none;
+            border-left: 4px solid #27ae60;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-card::before {
+            display: none;
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0,0,0,0.15);
+        }
+
+        .case-study-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+
+        .case-study-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .case-study-description {
+            color: #555;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .case-study-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 30px;
+            font-size: 1.05rem;
+            font-style: italic;
+            border-top: none;
+            margin-top: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Acrux Grid</h1>
+            <p class="subtitle">Please find the case studies of the projects the Acrux Grid team has worked on till now.</p>
+        </div>
+
+        <div class="case-studies-grid">
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_AI_Governance_Platform.html" class="case-study-link">
+                    <h3 class="case-study-title">AI Governance Platform Agent</h3>
+                    <p class="case-study-description">Comprehensive AI governance and compliance management system</p>
+                    <span class="case-study-tag">AI Governance</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_BDE_Performance_Tracking.html" class="case-study-link">
+                    <h3 class="case-study-title">BDE Performance Tracking Agent</h3>
+                    <p class="case-study-description">Business Development Executive performance monitoring and analytics</p>
+                    <span class="case-study-tag">Performance Analytics</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_employee_sentiment.html" class="case-study-link">
+                    <h3 class="case-study-title">Employee Sentiment Agent</h3>
+                    <p class="case-study-description">Real-time employee sentiment analysis and workplace insights</p>
+                    <span class="case-study-tag">Sentiment Analysis</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_it_infrastructure.html" class="case-study-link">
+                    <h3 class="case-study-title">IT Infrastructure Agent</h3>
+                    <p class="case-study-description">Intelligent IT infrastructure monitoring and management system</p>
+                    <span class="case-study-tag">Infrastructure</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_Feedback_Loop_Optimization.html" class="case-study-link">
+                    <h3 class="case-study-title">Feedback Loop Optimization Agent</h3>
+                    <p class="case-study-description">Automated feedback collection and process optimization system</p>
+                    <span class="case-study-tag">Process Optimization</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_Lead_Distribution.html" class="case-study-link">
+                    <h3 class="case-study-title">Lead Distribution Agent</h3>
+                    <p class="case-study-description">Intelligent lead routing and distribution management</p>
+                    <span class="case-study-tag">Lead Management</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_Lead_Scoring.html" class="case-study-link">
+                    <h3 class="case-study-title">Lead Scoring Agent</h3>
+                    <p class="case-study-description">AI-powered lead qualification and scoring system</p>
+                    <span class="case-study-tag">Lead Scoring</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_Model_Monitoring.html" class="case-study-link">
+                    <h3 class="case-study-title">Model Monitoring Agent</h3>
+                    <p class="case-study-description">Continuous ML model performance monitoring and alerting</p>
+                    <span class="case-study-tag">ML Monitoring</span>
+                </a>
+            </div>
+
+            <div class="case-study-card">
+                <a href="file:///Users/rudranilkar/Desktop/Consultancy/Case%20Study%20HTML%20Files/case_study_Real-Time_Fraud_Detection.html" class="case-study-link">
+                    <h3 class="case-study-title">Real-Time Fraud Detection Agent</h3>
+                    <p class="case-study-description">Advanced real-time fraud detection and prevention system</p>
+                    <span class="case-study-tag">Fraud Detection</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 Acrux Grid. All case studies represent actual project implementations.</p>
+        </div>
+    </div>
+</body>
+</html>

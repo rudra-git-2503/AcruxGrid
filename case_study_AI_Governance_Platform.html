@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: left;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #27ae60;
+            display: inline-block;
+        }
+
+        .overview-text {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .challenge-list, .approach-list {
+            list-style: none;
+        }
+
+        .challenge-list li, .approach-list li {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .challenge-list li::before, .approach-list li::before {
+            content: "•";
+            color: #27ae60;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result-number {
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: #27ae60;
+            margin-bottom: 8px;
+        }
+
+        .result-label {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .timeline {
+            margin-top: 30px;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            background: #f8f9fa;
+            padding: 25px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .timeline-week {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .timeline-task {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .footer-message {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.05rem;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+            
+            .header, .content {
+                padding: 40px 25px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .timeline-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1 id="main-title">Smart Lead Scoring</h1>
+            <div class="subtitle" id="subtitle">Case Study: AI-Driven Lead Prioritization and Conversion Rate Optimization</div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content">
+            <!-- Overview Section -->
+            <div class="section">
+                <h2 class="section-title">Overview</h2>
+                <p class="overview-text" id="overview-text">
+                    Helped an EdTech firm with large inbound volume to implement AI-based lead scoring for increased conversion.
+                </p>
+            </div>
+
+            <!-- Challenges and Approach Section -->
+            <div class="two-column">
+                <div class="section">
+                    <h2 class="section-title">Challenges</h2>
+                    <ul class="challenge-list" id="challenges-list">
+                        <li>Low conversion due to poor lead prioritization</li>
+                        <li>High rep time spent on unqualified leads</li>
+                        <li>No dynamic lead ranking system</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Our Approach</h2>
+                    <ul class="approach-list" id="approach-list">
+                        <li>Trained ML model using historical data & lead behavior</li>
+                        <li>Integrated with CRM for real-time scoring</li>
+                        <li>Created feedback loop to refine scoring model</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div class="section">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="results-grid" id="results-grid">
+                    <div class="result-card">
+                        <div class="result-number">↑ 8% to 13%</div>
+                        <div class="result-label">Lead conversion rate</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-number">↓ 30 to 10 min</div>
+                        <div class="result-label">Rep response time</div>
+                    </div>
+                    <div class="result-card">
+                        <div class="result-number">↓ 12 to 5 min</div>
+                        <div class="result-label">Time spent per lead</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Timeline -->
+            <div class="section">
+                <h2 class="section-title">Implementation Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-grid" id="timeline-grid">
+                        <div class="timeline-item">
+                            <div class="timeline-week">Week 1-2</div>
+                            <div class="timeline-task">Data audit & goal alignment</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-week">Week 3-5</div>
+                            <div class="timeline-task">Model design & training</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-week">Week 6-9</div>
+                            <div class="timeline-task">CRM integration</div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-week">Week 10+</div>
+                            <div class="timeline-task">Model optimization & monitoring</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Message -->
+            <div class="footer-message" id="footer-message">
+                We can help you surface high-value leads, reduce sales fatigue, and focus efforts where they matter most!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to update case study content
+        function updateCaseStudy(data) {
+            // Update header
+            if (data.title) document.getElementById('main-title').textContent = data.title;
+            if (data.subtitle) document.getElementById('subtitle').textContent = data.subtitle;
+            
+            // Update overview
+            if (data.overview) document.getElementById('overview-text').textContent = data.overview;
+            
+            // Update challenges
+            if (data.challenges) {
+                const challengesList = document.getElementById('challenges-list');
+                challengesList.innerHTML = '';
+                data.challenges.forEach(challenge => {
+                    const li = document.createElement('li');
+                    li.textContent = challenge;
+                    challengesList.appendChild(li);
+                });
+            }
+            
+            // Update approach
+            if (data.approach) {
+                const approachList = document.getElementById('approach-list');
+                approachList.innerHTML = '';
+                data.approach.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = item;
+                    approachList.appendChild(li);
+                });
+            }
+            
+            // Update results
+            if (data.results) {
+                const resultsGrid = document.getElementById('results-grid');
+                resultsGrid.innerHTML = '';
+                data.results.forEach(result => {
+                    const card = document.createElement('div');
+                    card.className = 'result-card';
+                    card.innerHTML = `
+                        <div class="result-number">${result.number}</div>
+                        <div class="result-label">${result.label}</div>
+                    `;
+                    resultsGrid.appendChild(card);
+                });
+            }
+            
+            // Update timeline
+            if (data.timeline) {
+                const timelineGrid = document.getElementById('timeline-grid');
+                timelineGrid.innerHTML = '';
+                data.timeline.forEach(item => {
+                    const timelineItem = document.createElement('div');
+                    timelineItem.className = 'timeline-item';
+                    timelineItem.innerHTML = `
+                        <div class="timeline-week">${item.week}</div>
+                        <div class="timeline-task">${item.task}</div>
+                    `;
+                    timelineGrid.appendChild(timelineItem);
+                });
+            }
+            
+            // Update footer message
+            if (data.footerMessage) {
+                document.getElementById('footer-message').textContent = data.footerMessage;
+            }
+        }
+
+        // Load the AI Governance Platform case study
+        updateCaseStudy({
+            title: "AI Governance Platform",
+            subtitle: "Case Study: Transparent Bureaucracy with Decentralized Tech",
+            overview: "AcruxGrid developed an AI-based field reporting platform to ensure real-time, tamper-proof governance data delivery directly to top leadership.",
+            challenges: [
+                "Data distortion in hierarchical reporting",
+                "Delayed response from field insights",
+                "No traceability or source-level verification",
+                "Public trust deficit in administration"
+            ],
+            approach: [
+                "Built decentralized data logging layer",
+                "Ensured immutability via AI",
+                "Enabled direct access for CMO office",
+                "Provided real-time audit & geo-trace logs"
+            ],
+            results: [
+                {number: "↓ to near-zero", label: "Data distortion"},
+                {number: "↑ real-time", label: "CMO visibility"},
+                {number: "↓ weeks to days", label: "Decision delay"},
+                {number: "↑ improved", label: "Transparency perception"}
+            ],
+            timeline: [
+                {week: "Week 1-2", task: "Process mapping with departments"},
+                {week: "Week 3-5", task: "AI infra setup"},
+                {week: "Week 6-8", task: "Field onboarding & training"},
+                {week: "Week 9+", task: "Rollout & policy feedback loop"}
+            ],
+            footerMessage: "This made the governance pulse visible live on a dashboard. No more filtered truths."
+        });
+    </script>
+</body>
+</html>
